@@ -1,7 +1,13 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ */
 package mx.com.company;
 
 import java.util.Arrays;
 
+/*
+ * 
+ */
 public class Population {
     private Chromosome[] chromosomes;
 

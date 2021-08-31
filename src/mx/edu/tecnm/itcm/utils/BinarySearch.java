@@ -12,7 +12,8 @@ public class BinarySearch {
     public static int binarySearch(int[] array, int minLimit, int maxLimit, int value) {
         if (maxLimit >= 0 && array[minLimit] <= value && array[maxLimit] >= value) {
             int mid = getMidValue(minLimit, maxLimit);
-            System.out.printf("Límite inferior %d límite superior %d valor en el arreglo %d valor a buscar %d%n", minLimit, maxLimit, array[mid], value);
+            System.out.printf("Límite inferior %d límite superior %d valor en el arreglo %d valor a buscar %d%n",
+                    minLimit, maxLimit, array[mid], value);
             if (array[mid] == value) {
                 return mid;
             } else if (array[mid] < value) {
@@ -47,7 +48,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int value = 400;
         System.out.println("Se quiere buscar: " + value);
-        int[] arr = {10, 15, 20, 40, 50, 100, 120, 200, 400, 500, 600, 800, 2222};
+        int[] arr = { 10, 15, 20, 40, 50, 100, 120, 200, 400, 500, 600, 800, 2222 };
         int result = binarySearch(arr, 0, arr.length - 1, value);
         System.out.printf("Result %d%n", result);
     }

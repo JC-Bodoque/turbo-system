@@ -7,11 +7,11 @@ package mx.edu.tecnm.itcm.utils;
  * @author Henry McElwaine
  *
  *         It is based on the divide and conquer technique, which consists of
- *         subdividing the array into smaller sub-arrays, and
- *         ordering them. To do this division, an array value is taken as a
- *         pivot, and all the elements less than this pivot are moved to its
- *         left, and the greater ones to its right. Next, the same method is
- *         applied to each of the two parts into which the array is divided.
+ *         subdividing the array into smaller sub-arrays, and ordering them. To
+ *         do this division, an array value is taken as a pivot, and all the
+ *         elements less than this pivot are moved to its left, and the greater
+ *         ones to its right. Next, the same method is applied to each of the
+ *         two parts into which the array is divided.
  */
 public class QuickSort {
 
