@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * Replace this license header with the corresponding LICENSE.
  */
 package mx.com.company;
 
@@ -7,12 +7,12 @@ import java.util.Arrays;
 
 /**
  * <p>
- * Lectus malesuada magna taciti odio diam placerat congue. Purus nisi euismod
- * facilisis! Sagittis nascetur pharetra leo congue vehicula commodo lobortis
- * cras tincidunt metus nullam curabitur. Class cursus, viverra dis curae;.
- * Sollicitudin morbi enim a faucibus. Dictumst cubilia faucibus aliquet purus
- * netus eros tempor lobortis. Nulla adipiscing est gravida suspendisse mi
- * ultrices porttitor.
+ * This class represents a population. Lectus malesuada magna taciti odio diam
+ * placerat congue. Purus nisi euismod facilisis! Sagittis nascetur pharetra leo
+ * congue vehicula commodo lobortis cras tincidunt metus nullam curabitur. Class
+ * cursus, viverra dis curae;. Sollicitudin morbi enim a faucibus. Dictumst
+ * cubilia faucibus aliquet purus netus eros tempor lobortis. Nulla adipiscing
+ * est gravida suspendisse mi ultrices porttitor.
  *
  * <p>
  * Commodo interdum fringilla ante? Hac blandit molestie risus ut hendrerit
@@ -35,6 +35,8 @@ public class Population {
     /**
      * This is the typical format of a simple documentation comment that spans two
      * lines.
+     * 
+     * @param length the length of the population.
      */
     public Population(int length) {
         chromosomes = new Chromosome[length];
@@ -69,8 +71,7 @@ public class Population {
     }
 
     /**
-     * This is the typical format of a simple documentation comment that spans two
-     * lines.
+     * This method return the population chromosomes.
      */
     public Chromosome[] getChromosomes() {
         return chromosomes;

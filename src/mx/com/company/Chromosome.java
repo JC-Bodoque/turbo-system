@@ -1,15 +1,18 @@
+/*
+ * Replace this license header with the corresponding LICENSE.
+ */
 package mx.com.company;
 
 import java.util.Arrays;
 
 /**
  * <p>
- * Lectus malesuada magna taciti odio diam placerat congue. Purus nisi euismod
- * facilisis! Sagittis nascetur pharetra leo congue vehicula commodo lobortis
- * cras tincidunt metus nullam curabitur. Class cursus, viverra dis curae;.
- * Sollicitudin morbi enim a faucibus. {@link Population}. Dictumst cubilia
- * faucibus aliquet purus netus eros tempor lobortis. Nulla adipiscing est
- * gravida suspendisse mi ultrices porttitor.
+ * This class represents a single Chromosome, that is an array of genes. Purus
+ * nisi euismod facilisis! Sagittis nascetur pharetra leo congue vehicula
+ * commodo lobortis cras tincidunt metus nullam curabitur. Class cursus, viverra
+ * dis curae;. Sollicitudin morbi enim a faucibus. {@link Population}. Dictumst
+ * cubilia faucibus aliquet purus netus eros tempor lobortis. Nulla adipiscing
+ * est gravida suspendisse mi ultrices porttitor.
  *
  * <p>
  * Commodo interdum fringilla ante? Hac blandit molestie risus ut hendrerit
@@ -65,8 +68,7 @@ public class Chromosome {
     }
 
     /**
-     * This is the typical format of a simple documentation comment that spans two
-     * lines.
+     * This method return the current fitness of the given chromosome.
      *
      * @return the chromosome fitness
      */
@@ -79,8 +81,7 @@ public class Chromosome {
     }
 
     /**
-     * This is the typical format of a simple documentation comment that spans two
-     * lines.
+     * This method change the fitness of the given chromosome.
      *
      * @param fitness the new fitness
      */
@@ -89,8 +90,7 @@ public class Chromosome {
     }
 
     /**
-     * This is the typical format of a simple documentation comment that spans two
-     * lines.
+     * This method return the current genes of the given chromosome.
      */
     public int[] getGenes() {
         return genes;

@@ -1,40 +1,7 @@
 package mx.com.company;
 
 /**
- * <p>
- * A genetic algorithm is a class of adaptive stochastic optimization algorithms
- * involving search and optimization. Genetic algorithms were first used by
- * Holland (1975).
- *
- * <p>
- * The basic idea is to try to mimic a simple picture of natural selection to
- * find a good algorithm. The first step is to mutate, or randomly vary, a given
- * collection of sample programs. The second step is a selection step, which is
- * often done by measuring against a fitness function. The process is repeated
- * until a suitable solution is found.
- *
- * <p>
- * There are a large number of different types of genetic algorithms. The step
- * involving mutation depends on how the sample programs are represented, as
- * well as whether the programmer includes various crossover techniques. The
- * fitness test is also up to the programmer.
- *
- * <p>
- * Like a gradient flow optimization, the process can get stuck in a local
- * maximum of the fitness function. One advantage of a genetic algorithm is that
- * it does not require the fitness function to be very smooth, since a random
- * search is done instead of following the path of the least resistance. But to
- * be successful, there needs to be some nice relationship between the
- * modifiable parameters to the fitness. In general, one runs into computational
- * irreducibility.
- *
- * <p>
- * Holland created an electronic organism as a binary string (“chromosome”) and
- * then used genetic and evolutionary principles of fitness-proportionate
- * selection for reproduction (including random crossover and mutation) to
- * search enormous solution spaces efficiently. So-called genetic programming
- * languages apply the same principles, using an expression tree instead of a
- * bit string as the "chromosome."
+ * This class represents a single GeneticAlgorithm.
  * 
  * @author Kyle B. Hemmer
  * @version 1.0
@@ -46,6 +13,12 @@ public class GeneticAlgorithm {
     public static final int NUMBER_OF_ELITE_CHROMOSOMES = 1;
     public static final int TOURNAMENT_SELECTION_SIZE = 5;
 
+    /**
+     * This method is used to cross a population with itself.
+     * 
+     * @param population the population to cross.
+     * @return a crossed population
+     */
     private Population crossover(Population population) {
         Population crossoverredPopulation = new Population(population.getChromosomes().length);
         for (int i = 0; i < NUMBER_OF_ELITE_CHROMOSOMES; i++) {
@@ -59,6 +32,12 @@ public class GeneticAlgorithm {
         return crossoverredPopulation;
     }
 
+    /**
+     * This method is used to mutate a population.
+     * 
+     * @param population population to mutate.
+     * @return the mutated population
+     */
     private Population mutate(Population population) {
         Population mutatedPopulation = new Population(population.getChromosomes().length);
         for (int i = 0; i < NUMBER_OF_ELITE_CHROMOSOMES; i++) {
@@ -70,10 +49,23 @@ public class GeneticAlgorithm {
         return mutatedPopulation;
     }
 
+    /**
+     * This method is used to evolve the population.
+     * 
+     * @param population population to evolve
+     * @return evolved population
+     */
     public Population evolve(Population population) {
         return mutate(crossover(population));
     }
 
+    /**
+     * This method is used to cross two chromosomes.
+     * 
+     * @param chromosome1 the first chromosome
+     * @param chromosome2 the second chromosome
+     * @return crossoverred chromosome
+     */
     public Chromosome crossover(Chromosome chromosome1, Chromosome chromosome2) {
         Chromosome crossoverredChromosome = new Chromosome(GeneticAlgorithm.TARGET_CHROMOSOME.length);
         for (int i = 0; i < chromosome1.getGenes().length; i++) {
@@ -86,6 +78,12 @@ public class GeneticAlgorithm {
         return crossoverredChromosome;
     }
 
+    /**
+     * This method is used to mutate a chromosome based on a mutaion rate.
+     * 
+     * @param chromosome the first chromosome
+     * @return mutated chromosome
+     */
     public Chromosome mutate(Chromosome chromosome) {
         Chromosome mutatedChromosome = new Chromosome(GeneticAlgorithm.TARGET_CHROMOSOME.length);
         for (int i = 0; i < chromosome.getGenes().length; i++) {
@@ -102,6 +100,12 @@ public class GeneticAlgorithm {
         return mutatedChromosome;
     }
 
+    /**
+     * This method is used to select the best individuals to the tournament.
+     * 
+     * @param population
+     * @return
+     */
     public Population selectTournamentPopulation(Population population) {
         Population tournamentPopulation = new Population(TOURNAMENT_SELECTION_SIZE);
         for (int i = 0; i < TOURNAMENT_SELECTION_SIZE; i++) {
